@@ -20,6 +20,7 @@ import {
     participantIsKnockingOrUpdated,
     setLobbyModeEnabled,
     startKnocking,
+    cancelKnocking,
     setPasswordJoinFailed
 } from './actions';
 import { KNOCKING_PARTICIPANT_SOUND_ID } from './constants';
@@ -140,6 +141,7 @@ function _conferenceFailed({ dispatch, getState }, next, action) {
             hideErrorSupportLink: true,
             titleKey: 'lobby.joinRejectedMessage'
         }));
+        dispatch(cancelKnocking());
     }
 
     return next(action);
