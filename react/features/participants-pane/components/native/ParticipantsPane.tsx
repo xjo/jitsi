@@ -11,11 +11,6 @@ import ParticipantsPaneFooter from './ParticipantsPaneFooter';
 import styles from './styles';
 
 
-/**
- * Participants pane.
- *
- * @returns {React$Element<any>}
- */
 const ParticipantsPane = () => {
     const isLocalModerator = useSelector(isLocalParticipantModerator);
     const keyExtractor
