@@ -14,7 +14,6 @@ import PersistenceRegistry from '../../redux/PersistenceRegistry';
 import ReducerRegistry from '../../redux/ReducerRegistry';
 import StateListenerRegistry from '../../redux/StateListenerRegistry';
 import SoundCollection from '../../sounds/components/SoundCollection';
-import { createDeferred } from '../../util/helpers';
 import { appWillMount, appWillUnmount } from '../actions';
 import logger from '../logger';
 
@@ -79,7 +78,7 @@ export default class BaseApp<P> extends Component<P, IState> {
          * @see {@link #_initStorage}
          * @type {Promise}
          */
-        this._init = createDeferred();
+        this._init = Promise.withResolvers();
 
         try {
             await this._initStorage();
