@@ -226,7 +226,7 @@ export const microsoftCalendarApi = {
                     userSigninName: tokenParts.userSigninName
                 }));
 
-                signInDeferred.resolve();
+                signInDeferred.resolve(undefined);
             }
 
             window.addEventListener('message', handleAuth);
