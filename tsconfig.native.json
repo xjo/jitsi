@@ -2,9 +2,9 @@
     "include": ["react/features/**/*.ts", "react/features/**/*.tsx", "./custom.d.ts", "./globals.native.d.ts"],
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "target": "es2020",
+        "target": "esnext",
         "jsx": "react-native",
-        "lib": [ "es2020"],
+        "lib": [ "esnext"],
         "types": [ "react-native" ],
         "skipLibCheck": true,
         "moduleResolution": "Node",
